@@ -1,0 +1,163 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 1200px;
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.input-section, .output-section {
+    width: 48%;
+    min-width: 280px;
+}
+
+textarea {
+    width: 100%;
+    height: 200px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    resize: none;
+    font-size: 16px;
+    box-sizing: border-box;
+}
+
+.info-text {
+    color: #ff0000; /* Texto en rojo para que destaque */
+    font-size: 14px;
+    margin-top: 5px;
+}
+
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 10px;
+}
+
+button {
+    width: 48%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #007BFF;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #0056b3;
+}
+
+.output-section {
+    min-height: 200px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    padding: 10px;
+    background-color: #f9f9f9;
+    box-sizing: border-box;
+}
+
+#outputText {
+    color: #555;
+    font-size: 16px;
+    text-align: center;
+    margin-bottom: 10px;
+}
+
+#copyBtn {
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: #28a745;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+}
+
+#copyBtn:hover {
+    background-color: #218838;
+}
+
+@media (max-width: 768px) {
+    .container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .input-section, .output-section {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    button {
+        width: 100%;
+        margin: 5px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    textarea {
+        height: 150px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+    #outputText {
+        font-size: 14px;
+    }
+
+    .info-text {
+        font-size: 12px;
+    }
+
+
+    #outputPlaceholder {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        position: relative; /* Permite que los elementos hijos se posicionen relativos a este contenedor */
+        height: 200px; /* Asegura que haya suficiente espacio para la imagen y el texto */
+    }
+    
+    #placeholderImage {
+        max-width: 50px; /* Ajusta el ancho máximo de la imagen */
+        max-height: 50px; /* Ajusta la altura máxima de la imagen */
+        position: absolute; /* Mantén la posición absoluta para centrarla */
+        top: 50%; 
+        transform: translateY(-50%); 
+    
+    #outputText {
+        color: #555;
+        font-size: 16px;
+        text-align: center;
+        margin-top: 100px; /* Asegura que el texto quede debajo de la imagen */
+    }
+}
+
+}
